@@ -42,7 +42,7 @@
                         <!-- Entry Meta
                         ============================================= -->
                         <ul class="entry-meta clearfix">
-                            <?php 
+                            <?php
                                 Date::setLocale('id');
                                 $create = new Date($job->created_at);
                                 $update = new Date($job->updated_at);
@@ -101,7 +101,7 @@
                         <div class="entry-image">
                             <img src="{{ url('/') }}/uploads/jobs/{{ $job->pic }}" alt="{{ $job->name }}">
                         </div><!-- .entry-image end -->
-                        
+
                     </div>
                 @endif
 
@@ -110,12 +110,15 @@
                         <!-- Post Author Info
                         ============================================= -->
                         <h4>Diposting oleh <span><a href="#">{{ DB::table('users')->where('id', $job->user_id)->value('name') }}</a></span></h4>
-                        <div class="well">
+                        <div class="well" style="min-height: 150px">
                             <div class="author-image" style="margin-left: 10px; margin-bottom: 5px">
                                 <img src="{{ url('/') }}/images/author/1.jpg" alt="" class="img-circle">
                             </div>
                             @if(DB::table('users')->where('id', $job->user_id)->value('bio')!="")
                                 Bio: {{ DB::table('users')->where('id', $job->user_id)->value('bio') }}<br>
+                            @endif
+                            @if($job->user_id != Auth::user()->id)
+                                <a href="{{ url('message/create') }}/{{ $job->user_id }}">Kirim Pesan</a><br>
                             @endif
                         </div><!-- Post Single - Author End -->
 

@@ -37,17 +37,17 @@
             @endif
 
             <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
-                
+
                 {{ Form::label('category_id', 'Kategori *', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
 
-                    {{ Form::select('category_id', array('1' => 'Leopard', '2' => 'Lion'), null, array('class' => 'sm-form-control', 'placeholder' => '-- Pilih kategori --')) }}
+                    {{ Form::select('category_id', array('1' => 'Bersih-bersih', '2' => 'Antar-jemput', '2' => 'Jaga'), null, array('class' => 'sm-form-control', 'placeholder' => '-- Pilih kategori --')) }}
 
                 </div>
             </div>
 
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                
+
                 {{ Form::label('name', 'Nama Lowongan *', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
 
@@ -57,7 +57,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('location') ? ' has-error' : '' }}">
-                
+
                 {{ Form::label('location', 'Lokasi *', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
 
@@ -67,7 +67,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
-                
+
                 {{ Form::label('description', 'Deskripsi *', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
 
@@ -77,7 +77,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
-                
+
                 {{ Form::label('phone', 'Telp/HP', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
 
@@ -87,7 +87,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                
+
                 {{ Form::label('email', 'Email', array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
 
@@ -97,7 +97,7 @@
             </div>
 
             <div class="form-group{{ $errors->has('pic') ? ' has-error' : '' }}">
-                
+
                 {{ Form::label('pic','Gambar',array('class' => 'col-md-4 control-label')) }}
                 <div class="col-md-6">
 
@@ -106,8 +106,8 @@
                 </div>
             </div>
 
-  
-  
+
+
 
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">

@@ -68,9 +68,9 @@ class JobController extends Controller
                 ->withInput();
         } else {
             $job = new Job;
-            if(Input::file('pic')->isValid()){
+            if(Input::file('pic') != NULL && Input::file('pic')->isValid()){
                 $destinationPath = 'uploads/jobs';
-                $extension = Input::file('pic')->getClientOriginalExtension(); 
+                $extension = Input::file('pic')->getClientOriginalExtension();
                 $fileName = date('YmdHms').'_'.$request->user_id.'.'.$extension;
                 Input::file('pic')->move($destinationPath, $fileName);
                 $job->pic = $fileName;
@@ -119,7 +119,7 @@ class JobController extends Controller
             Session::flash('message', 'Anda tidak memiliki kewenangan untuk mengakses');
             return redirect('job');
         }
-        
+
     }
 
     /**
@@ -153,7 +153,7 @@ class JobController extends Controller
                 $destinationPath = 'uploads/jobs';
                 $extension = Input::file('pic')->getClientOriginalExtension();
                 $fileName = date('YmdHms').'_'.$request->user_id.'.'.$extension;
-                $job->pic = $fileName; 
+                $job->pic = $fileName;
                 Input::file('pic')->move($destinationPath, $fileName);
             }
 

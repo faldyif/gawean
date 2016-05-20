@@ -77,6 +77,11 @@
                                 <li><a href="{{ url('/login') }}">Masuk</a></li>
                                 <li><a href="{{ url('/register') }}">Daftar</a></li>
                             @else
+                                @if(count(DB::table('messages')->where('to_user_id', Auth::user()->id)->where('read', false)->get()) != 0)
+                                <li><a href="{{ url('message') }}">Pesan ({{ count(DB::table('messages')->where('to_user_id', Auth::user()->id)->where('read', false)->get()) }} baru)</a></li>
+                                @else
+                                <li><a href="{{ url('message') }}">Pesan</a></li>
+                                @endif
                                 <li><a href="{{ url('/job') }}">Lowongan</a></li>
                                 <li><a href="{{ url('/offer') }}">Jasa</a></li>
                                 <li class="dropdown">

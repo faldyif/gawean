@@ -26,8 +26,9 @@ Route::get('/home', 'HomeController@index');
 Route::group(['middleware' => 'auth'], function() {
 	Route::resource('job', 'JobController');
 	Route::resource('offer', 'OfferController');
+	Route::resource('message', 'MessageController');
 	Route::resource('profile', 'ProfileController', ['except' => ['create']]);
+  Route::get('message/create/{id}', 'MessageController@sendTo')->name('message.sendto');
 	Route::get('editprofile', 'ProfileController@edit')->name('profile.edit');
 	Route::get('search/{query}', 'SearchController@show')->name('search.show');
 });
-

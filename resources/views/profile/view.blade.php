@@ -40,7 +40,7 @@
                         <!-- Entry Content
                         ============================================= -->
                         <div class="entry-content notopmargin">
-                            <?php 
+                            <?php
                                 Date::setLocale('id');
                                 $create = new Date($user->created_at);
                                 $update = new Date($user->updated_at);
@@ -66,16 +66,14 @@
                         <div class="entry-image">
                             <img src="{{ url('uploads/avatars') }}/{{ $user->pic }}" alt="Avatar {{ $user->name }}">
                         </div><!-- .entry-image end -->
-                        
+
                     </div>
                 @endif
 
                 <div class="sidebar-widgets-wrap">
                 @if(Auth::user()->id != $user->id)
                 <div class="widget clearfix">
-
-                    <a href="#" class="button button-3d button-black nomargin">Tambah Teman</a>
-
+                    <a href="{{ url('message/create') }}" class="button button-3d button-black nomargin">Kirim Pesan</a>
                 </div>
                 @else
 

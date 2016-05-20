@@ -9,7 +9,7 @@ return array(
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateTableCategory' => $baseDir . '/database/migrations/2016_05_15_162927_create_table_category.php',
     'CreateTableJob' => $baseDir . '/database/migrations/2016_05_15_162826_create_table_job.php',
-    'CreateTableMessage' => $baseDir . '/database/migrations/2016_05_18_100026_create_table_message.php',
+    'CreateTableMessage' => $baseDir . '/database/migrations/2016_05_20_053620_create_table_message.php',
     'CreateTableOffer' => $baseDir . '/database/migrations/2016_05_15_162708_create_table_offer.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
