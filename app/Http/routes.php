@@ -30,5 +30,6 @@ Route::group(['middleware' => 'auth'], function() {
 	Route::resource('profile', 'ProfileController', ['except' => ['create']]);
   Route::get('message/create/{id}', 'MessageController@sendTo')->name('message.sendto');
 	Route::get('editprofile', 'ProfileController@edit')->name('profile.edit');
+	Route::get('search', 'SearchController@index')->name('search.index');
 	Route::get('search/{query}', 'SearchController@show')->name('search.show');
 });

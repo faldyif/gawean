@@ -180,6 +180,7 @@ class JobController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $job = Job::find($id);
+        $job->remove();
     }
 }
