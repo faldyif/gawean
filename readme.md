@@ -1,4 +1,3 @@
 # Gawean
 
-Aplikasi pencari kerjaan kecil-kecilan
-Masih dalam tahap development
+Aplikasi pencari kerjaan kecil-kecilan. Masih dalam tahap development
